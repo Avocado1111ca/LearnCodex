@@ -1,6 +1,5 @@
 from typing import List, Tuple
 
-
 class Othello:
     SIZE = 8
     EMPTY = '.'
@@ -71,13 +70,3 @@ class Othello:
         black = sum(row.count(self.BLACK) for row in self.board)
         white = sum(row.count(self.WHITE) for row in self.board)
         return {self.BLACK: black, self.WHITE: white}
-
-    def board_str(self) -> str:
-        header = "  " + " ".join(str(i) for i in range(self.SIZE))
-        rows = [header]
-        for idx, row in enumerate(self.board):
-            rows.append(f"{idx} " + " ".join(row))
-        return "\n".join(rows)
-
-    def __str__(self) -> str:
-        return self.board_str()

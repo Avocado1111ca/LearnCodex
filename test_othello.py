@@ -23,19 +23,3 @@ def test_move_flips():
     assert game.board[3][3] == Othello.BLACK
     assert game.board[2][3] == Othello.BLACK
     assert game.current == Othello.WHITE
-
-
-def test_board_str():
-    game = Othello()
-    expected = (
-        "  0 1 2 3 4 5 6 7\n"
-        "0 . . . . . . . .\n"
-        "1 . . . . . . . .\n"
-        "2 . . . . . . . .\n"
-        "3 . . . W B . . .\n"
-        "4 . . . B W . . .\n"
-        "5 . . . . . . . .\n"
-        "6 . . . . . . . .\n"
-        "7 . . . . . . . ."
-    )
-    assert game.board_str() == expected
